@@ -1,0 +1,3 @@
+greeter:
+    resource: "@GreeterBundle/Resources/config/routing.yml"
+    prefix:   /

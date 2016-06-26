@@ -1,0 +1,12 @@
+{% extends 'GreeterBundle::layout.html.twig' %}
+
+
+{% block content %}
+    <h1>Pick your gender</h1>
+    <a href="{{ path('sylius_flow_forward', {'scenarioAlias': 'greeter', 'stepName': 'gender', 'gender' : 'male'}) }}" class="btn btn-info">
+        male
+    </a>
+    <a href="{{ path('sylius_flow_forward', {'scenarioAlias': 'greeter', 'stepName': 'gender', 'gender' : 'female'}) }}" class="btn btn-danger">
+        female
+    </a>
+{% endblock %}

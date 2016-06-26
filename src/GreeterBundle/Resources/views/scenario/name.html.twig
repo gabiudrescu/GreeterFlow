@@ -1,0 +1,16 @@
+{% extends '@Greeter/layout.html.twig' %}
+
+{% block content %}
+    {% if 'male' == gender %}
+        Greeting, mylord!
+    {% elseif 'female' == gender %}
+        Greetings, mylady!
+    {% endif %}
+
+
+    <p>
+        <a href="{{ path('sylius_flow_start', {'scenarioAlias': 'greeter'}) }}" class="btn btn-success">
+            Start again
+        </a>
+    </p>
+{% endblock %}

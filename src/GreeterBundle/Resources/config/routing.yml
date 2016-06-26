@@ -1,0 +1,16 @@
+greeter_homepage:
+    path:     /
+    defaults: { _controller: GreeterBundle:Default:index }
+
+
+sylius_flow_start:
+    path: /{scenarioAlias}
+    defaults: { _controller: sylius.controller.process:startAction }
+
+sylius_flow_display:
+    path: /display/{scenarioAlias}/{stepName}
+    defaults: { _controller: sylius.controller.process:displayAction }
+
+sylius_flow_forward:
+    path: /{scenarioAlias}/{stepName}/forward
+    defaults: { _controller: sylius.controller.process:forwardAction }
